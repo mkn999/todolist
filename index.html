@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .tasks{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .inputbox{
+            
+            padding: 6px 12px;
+                    background: rgb(31, 32, 35);
+                    border: 1px solid rgb(60, 63, 68);
+                    width: 200px;
+                    height: 20px;
+                    border-radius: 4px;
+                    font-size: 13px;
+                    color: rgb(247, 248, 248);
+                    appearance: none;
+                    transition: border 0.15s ease 0s;
+                    :focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+                
+        }
+        .sumbitButton{
+                outline: 0;
+                cursor: pointer;
+                border: 2px solid #000;
+                border-radius: 3px;
+                color: #fff;
+                background: #000;
+                font-size: 20px;
+                font-weight: 600;
+                width: 200px;
+                height: 35px;
+                text-align:center;
+                transition-duration: .15s;
+                transition-property: all;
+                transition-timing-function: cubic-bezier(.4,0,.2,1);
+                :hover{
+                    color: #000;
+                    background: rgb(255, 218, 87);
+                }
+                
+        }
+        .duedate{
+            width: 200px;
+            height: 30px;
+        }
+        .taskname{
+            color: black;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }    
+        .deleteButton{
+            outline: 0;
+                cursor: pointer;
+                border: 2px solid #000;
+                border-radius: 3px;
+                color: #000000;
+                background: #ffffff;
+                font-size: 20px;
+                font-weight: 600;
+                width: 100px;
+                height: 35px;
+                text-align:center;
+                transition-duration: .15s;
+                transition-property: all;
+                transition-timing-function: cubic-bezier(.4,0,.2,1);
+                :hover{
+                    color: #000;
+                    background: rgb(255, 218, 87);
+                }
+                
+        }    
+    </style>
+</head>
+<body>
+    <div class="container">
+    <input placeholder="enter task" class="inputbox"/>
+    <input type="date" class="duedate"/>
+    <button class="sumbitButton" onclick="addElements()">Add task</button>
+    </div>
+    <div class="tasks"></div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
